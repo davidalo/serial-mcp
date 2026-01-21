@@ -1,6 +1,6 @@
 [project]
 name = "serial-mcp"
-version = "0.1.0"
+version = "0.2.0"
 description = "MCP server for serial port management"
 readme = "README.md"
 requires-python = ">=3.10"
@@ -10,6 +10,11 @@ dependencies = [
     "pyserial-asyncio>=0.6",
     "pydantic>=2.0",
 ]
+
+[project.urls]
+Homepage = "https://github.com/davidalo/serial-mcp"
+Repository = "https://github.com/davidalo/serial-mcp"
+Issues = "https://github.com/davidalo/serial-mcp/issues"
 
 [project.scripts]
 serial-mcp = "serial_mcp:main"
