@@ -1,19 +1,24 @@
-# serial-mcp
+# 🔌 serial-mcp
 
 MCP server for serial port communication. Provides tools to open, read, write, and manage serial ports through the Model Context Protocol.
 
-*Written by and for AI.*
+*🤖 Written by and for AI.*
 
-## Features
+## ✨ Features
 
-- List available serial ports on the system
-- Open ports with configurable baud rate, parity, stop bits, and flow control
-- Read data by byte count, terminator character, or duration
-- Write string or hex data
-- Send BREAK signals
-- Monitor port status and control line states
+- 📋 List available serial ports on the system
+- ⚙️ Open ports with configurable baud rate, parity, stop bits, and flow control
+- 📖 Read data by byte count, terminator character, or duration
+- ✍️ Write string or hex data
+- 💥 Send BREAK signals
+- 📊 Monitor port status and control line states
 
-## Installation
+## 📦 Prerequisites
+
+- Python 3.10+
+- [uv](https://docs.astral.sh/uv/getting-started/installation/) package manager
+
+## 🚀 Installation
 
 ### Via PyPI
 
@@ -29,7 +34,7 @@ cd serial-mcp
 uvx --from "$(pwd)" serial-mcp
 ```
 
-## Integration
+## 🔗 Integration
 
 ### Via PyPI
 
@@ -54,7 +59,7 @@ claude mcp add serial -- uvx --from "$(pwd)" serial-mcp
 codex mcp add serial -- uvx --from "$(pwd)" serial-mcp
 ```
 
-## Tools
+## 🛠️ Tools
 
 | Tool | Description |
 |------|-------------|
@@ -69,7 +74,7 @@ codex mcp add serial -- uvx --from "$(pwd)" serial-mcp
 | `get_port_status` | Get port status and control line states |
 | `list_open_ports` | List all currently managed ports |
 
-## Testing with Virtual Ports
+## 🧪 Testing with Virtual Ports
 
 Use `socat` to create virtual serial port pairs for testing:
 
@@ -80,11 +85,6 @@ socat -d -d pty,raw,echo=0,link=/tmp/ttyV0 pty,raw,echo=0,link=/tmp/ttyV1
 
 Then open `/tmp/ttyV0` with the MCP server and `/tmp/ttyV1` with another terminal program to test communication.
 
-## Requirements
-
-- Python 3.10+
-- `uv` package manager (for running with `uvx`)
-
-## License
+## 📄 License
 
 MIT
